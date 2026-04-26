@@ -39,19 +39,25 @@ Password:
 ft_wandr...NDRel.L0L
 ```
 
-How can we understand this string ?
+we can try to understand what been typed into this network connection.
+
+Highliting the `f char` we can see wireshark shows us the request concerned for this char.
+
+Look for `PSH` requests as they contain the DATA, PSH mean PUSH.
 
 ![wireshark analyse](https://github.com/ftTower/ftTower/blob/main/assets/Snowcrash/level02/wireshark_analyse.png)
 
-![wireshark analyse](https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg)
 
 As we can see on the Hex row on ASCII table that `66` is the `f` char like we search for.
+
+![wireshark analyse](https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg)
+
 
 If we are doing this on the point : `.` is `7f` which in the ascii table is `DEL`.
 
 To interpret this the user was typing : ft_wandr and `DEL` 3 times and continued typing. (same for the last . in string)
 
-We get this string : `ft_waNDReL0L`
+We get the string `ft_waNDReL0L` out of `ft_wandr...NDRel.L0L`
 
 ```shell
 level02@SnowCrash:~$ su flag02
