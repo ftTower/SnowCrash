@@ -51,3 +51,20 @@ ssh level00@IP_ADDRESS -p 4242
 ![SSH connected](https://github.com/ftTower/ftTower/blob/main/assets/Snowcrash/ssh_connected.png)
 
 
+## Commands
+
+### Utils :
+
+```shell
+2> /dev/null # hide errors in dev/null
+```
+
+### find : 
+
+```shell
+cut -d: -f1 /etc/passwd # Looking for all users
+```
+
+```shell
+find / -user level00 # Looking for all user's files
+```
