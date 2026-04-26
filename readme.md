@@ -68,3 +68,13 @@ cut -d: -f1 /etc/passwd # Looking for all users
 ```shell
 find / -user level00 # Looking for all user's files
 ```
+
+### Locate :
+
+```shell
+locate rockyou.txt # can be used to easily locate a file
+```
+
+## Tools Used
+
+- [Cyberchef](https://gchq.github.io/CyberChef/) : Decoding/Encoding web tool

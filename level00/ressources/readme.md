@@ -175,3 +175,13 @@ Amount = 25: bchhccvofrvsfs
 ```
 
 ### Flag : `nottoohardhere`
+
+Here is how to validate the flag to go on next level.
+
+```shell
+level00@SnowCrash:~$ su flag00
+Password: nottoohardhere 
+Don't forget to launch getflag !
+flag00@SnowCrash:~$ getflag
+Check flag.Here is your token : x24ti5gi3x0ol2eh4esiuxias
+```
