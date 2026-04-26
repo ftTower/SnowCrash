@@ -29,9 +29,9 @@ Once you obtain your pcap file open it with wireshark like this (dont forget sud
 
 To look what been transmited during this session go to : `Analyze > Follow > TCP Stream` / `CTRL+ALT+SHIFT+T`
 
-![Kali follow tcp Stream]()
+![follow tcp Stream](https://github.com/ftTower/ftTower/blob/main/assets/Snowcrash/level02/wireshark_tcp.png)
 
-![TCP Follow]()
+![TCP Follow](https://github.com/ftTower/ftTower/blob/main/assets/Snowcrash/level02/tcp_follow.png)
 
 ```
 ..
@@ -40,6 +40,8 @@ ft_wandr...NDRel.L0L
 ```
 
 How can we understand this string ?
+
+![wireshark analyse](https://github.com/ftTower/ftTower/blob/main/assets/Snowcrash/level02/wireshark_analyse.png)
 
 ![wireshark analyse](https://upload.wikimedia.org/wikipedia/commons/1/1b/ASCII-Table-wide.svg)
 
