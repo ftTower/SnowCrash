@@ -69,6 +69,16 @@ cut -d: -f1 /etc/passwd # Looking for all users
 find / -user level00 # Looking for all user's files
 ```
 
+```shell
+find / -user level00 2> /dev/null | grep -v proc # Looking for all user's files (Without Kernel noise)
+```
+
+### Grep :
+
+```shell
+grep -v exclusion # Exclude `exclusion` from the search
+```
+
 ### Locate :
 
 ```shell
