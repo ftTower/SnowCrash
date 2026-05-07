@@ -114,3 +114,9 @@ the system will see `/tmp/level08` and call `token` next.
 level08@SnowCrash:~$ ./level08 /tmp/level08
 quif5eloekouj29ke0vouxean
 ```
+
+```shell
+level08@SnowCrash:~$ su flag08 -c getflag
+Password: 
+Check flag.Here is your token : 25749xKZ8L7DkSCwJkT9dyv6f
+```
